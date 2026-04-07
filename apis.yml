@@ -1,8 +1,8 @@
 aid: nubela
 name: Nubela
 description: >-
-  Build and scale data-driven applications on people and companies with our API
-  without worrying about scaling a web scraping and data-science team. 
+  Build and scale data-driven applications on people and companies with our API without
+  worrying about scaling a web scraping and data-science team.
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -18,8 +18,8 @@ apis:
   - aid: nubela:nubela
     name: Nubela
     description: >-
-      Build and scale data-driven applications on people and companies with our
-      API without worrying about scaling a web scraping and data-science team. 
+      Build and scale data-driven applications on people and companies with our API
+      without worrying about scaling a web scraping and data-science team.
     humanURL: ' https://nubela.co/proxycurl/'
     tags:
       - API
