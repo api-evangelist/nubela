@@ -32,6 +32,8 @@ apis:
       - People
       - Scraping
     properties:
+      - type: OpenAPI
+        url: openapi/nubela-openapi.yml
       - type: Documentation
         url: https://nubela.co/proxycurl/docs
       - type: Pricing
