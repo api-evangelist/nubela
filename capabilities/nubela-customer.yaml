@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Nubela Proxycurl API — Customer
+  description: 'Nubela Proxycurl API — Customer. 1 operations. Lead operation: List customers, investors, and partners of
+    a target company. Self-contained Naftiko capability covering one Nubela business surface.'
+  tags:
+  - Nubela
+  - Customer
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    NUBELA_API_KEY: NUBELA_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: nubela-customer
+    baseUri: https://nubela.co/proxycurl/api
+    description: Nubela Proxycurl API — Customer business capability. Self-contained, no shared references.
+    resources:
+    - name: customer-listing
+      path: /customer/listing
+      operations:
+      - name: listcustomers
+        method: GET
+        description: List customers, investors, and partners of a target company
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.NUBELA_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: nubela-customer-rest
+    port: 8080
+    description: REST adapter for Nubela Proxycurl API — Customer. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/customer/listing
+      name: customer-listing
+      description: REST surface for customer-listing.
+      operations:
+      - method: GET
+        name: listcustomers
+        description: List customers, investors, and partners of a target company
+        call: nubela-customer.listcustomers
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: nubela-customer-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Nubela Proxycurl API — Customer. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: list-customers-investors-and-partners
+      description: List customers, investors, and partners of a target company
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nubela-customer.listcustomers
+      outputParameters:
+      - type: object
+        mapping: $.

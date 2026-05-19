@@ -1,0 +1,230 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Nubela Proxycurl API — Company
+  description: 'Nubela Proxycurl API — Company. 6 operations. Lead operation: Get company metadata and leadership details.
+    Self-contained Naftiko capability covering one Nubela business surface.'
+  tags:
+  - Nubela
+  - Company
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    NUBELA_API_KEY: NUBELA_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: nubela-company
+    baseUri: https://nubela.co/proxycurl/api
+    description: Nubela Proxycurl API — Company business capability. Self-contained, no shared references.
+    resources:
+    - name: company-details
+      path: /company/details
+      operations:
+      - name: getcompanydetails
+        method: GET
+        description: Get company metadata and leadership details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: company-employee-count
+      path: /company/employee-count
+      operations:
+      - name: getcompanyemployeecount
+        method: GET
+        description: Get an estimated employee count range for a company
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: company-funding
+      path: /company/funding
+      operations:
+      - name: getcompanyfunding
+        method: GET
+        description: Get a company's funding history and investors
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: company-logo
+      path: /company/logo
+      operations:
+      - name: getcompanylogo
+        method: GET
+        description: Fetch the logo for a company
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: company-updates
+      path: /company/updates
+      operations:
+      - name: getcompanyupdates
+        method: GET
+        description: Retrieve recent company blog posts and social media updates
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: company-website
+      path: /company/website
+      operations:
+      - name: resolvecompanywebsite
+        method: GET
+        description: Resolve a company name to a canonical website URL
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.NUBELA_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: nubela-company-rest
+    port: 8080
+    description: REST adapter for Nubela Proxycurl API — Company. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/company/details
+      name: company-details
+      description: REST surface for company-details.
+      operations:
+      - method: GET
+        name: getcompanydetails
+        description: Get company metadata and leadership details
+        call: nubela-company.getcompanydetails
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/company/employee-count
+      name: company-employee-count
+      description: REST surface for company-employee-count.
+      operations:
+      - method: GET
+        name: getcompanyemployeecount
+        description: Get an estimated employee count range for a company
+        call: nubela-company.getcompanyemployeecount
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/company/funding
+      name: company-funding
+      description: REST surface for company-funding.
+      operations:
+      - method: GET
+        name: getcompanyfunding
+        description: Get a company's funding history and investors
+        call: nubela-company.getcompanyfunding
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/company/logo
+      name: company-logo
+      description: REST surface for company-logo.
+      operations:
+      - method: GET
+        name: getcompanylogo
+        description: Fetch the logo for a company
+        call: nubela-company.getcompanylogo
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/company/updates
+      name: company-updates
+      description: REST surface for company-updates.
+      operations:
+      - method: GET
+        name: getcompanyupdates
+        description: Retrieve recent company blog posts and social media updates
+        call: nubela-company.getcompanyupdates
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/company/website
+      name: company-website
+      description: REST surface for company-website.
+      operations:
+      - method: GET
+        name: resolvecompanywebsite
+        description: Resolve a company name to a canonical website URL
+        call: nubela-company.resolvecompanywebsite
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: nubela-company-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Nubela Proxycurl API — Company. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: get-company-metadata-and-leadership
+      description: Get company metadata and leadership details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nubela-company.getcompanydetails
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-estimated-employee-count-range
+      description: Get an estimated employee count range for a company
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nubela-company.getcompanyemployeecount
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-company-s-funding-history-and
+      description: Get a company's funding history and investors
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nubela-company.getcompanyfunding
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: fetch-logo-company
+      description: Fetch the logo for a company
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nubela-company.getcompanylogo
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-recent-company-blog-posts
+      description: Retrieve recent company blog posts and social media updates
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nubela-company.getcompanyupdates
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: resolve-company-name-canonical-website
+      description: Resolve a company name to a canonical website URL
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: nubela-company.resolvecompanywebsite
+      outputParameters:
+      - type: object
+        mapping: $.
