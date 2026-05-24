@@ -49,6 +49,8 @@ common:
     url: https://nubela.co/proxycurl/
   - type: Documentation
     url: https://nubela.co/proxycurl/docs
+  - type: LLMsTxt
+    url: https://nubela.co/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
