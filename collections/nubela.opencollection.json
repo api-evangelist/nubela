@@ -1,0 +1,169 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nubela Proxycurl API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Customer",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List customers, investors, and partners of a target company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/customer/listing"
+          },
+          "docs": "List customers, investors, and partners of a target company"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Competitor",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List competing companies for a target company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/competitor/listing"
+          },
+          "docs": "List competing companies for a target company"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Company",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetch the logo for a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/logo"
+          },
+          "docs": "Fetch the logo for a company"
+        },
+        {
+          "info": {
+            "name": "Get company metadata and leadership details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/details"
+          },
+          "docs": "Get company metadata and leadership details"
+        },
+        {
+          "info": {
+            "name": "Get an estimated employee count range for a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/employee-count"
+          },
+          "docs": "Get an estimated employee count range for a company"
+        },
+        {
+          "info": {
+            "name": "Retrieve recent company blog posts and social media updates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/updates"
+          },
+          "docs": "Retrieve recent company blog posts and social media updates"
+        },
+        {
+          "info": {
+            "name": "Get a company's funding history and investors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/funding"
+          },
+          "docs": "Get a company's funding history and investors"
+        },
+        {
+          "info": {
+            "name": "Resolve a company name to a canonical website URL",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/website"
+          },
+          "docs": "Resolve a company name to a canonical website URL"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Employee",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Find a work email given a person name and company domain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/employee/work-email"
+          },
+          "docs": "Find a work email given a person name and company domain"
+        },
+        {
+          "info": {
+            "name": "Enrich a professional profile by email or by name and employer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/employee/profile"
+          },
+          "docs": "Enrich a professional profile by email or by name and employer"
+        },
+        {
+          "info": {
+            "name": "Find similar professionals at competing companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/employee/similar"
+          },
+          "docs": "Find similar professionals at competing companies"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
