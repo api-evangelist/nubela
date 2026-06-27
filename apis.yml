@@ -43,7 +43,7 @@ common:
     url: https://nubela.co/proxycurl/
   - type: Documentation
     url: https://nubela.co/proxycurl/docs
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://nubela.co/llms.txt
 maintainers:
   - FN: Kin Lane
