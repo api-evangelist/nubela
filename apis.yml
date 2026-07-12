@@ -37,6 +37,10 @@ apis:
       - type: Pricing
         url: https://nubela.co/proxycurl/pricing
 common:
+  - type: DomainSecurity
+    url: security/nubela-domain-security.yml
+  - type: Authentication
+    url: authentication/nubela-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/nubela
   - type: Website
@@ -45,6 +49,8 @@ common:
     url: https://nubela.co/proxycurl/docs
   - type: LlmsText
     url: https://nubela.co/llms.txt
+  - url: https://nubela.co/blog/feed
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
