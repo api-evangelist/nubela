@@ -37,6 +37,8 @@ apis:
       - type: Pricing
         url: https://nubela.co/proxycurl/pricing
 common:
+  - type: AgenticAccess
+    url: agentic-access/nubela-agentic-access.yml
   - type: DomainSecurity
     url: security/nubela-domain-security.yml
   - type: Authentication
