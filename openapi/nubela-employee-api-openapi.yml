@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: Nubela Proxycurl Company Employee API
+  version: v1
+  description: Minimal OpenAPI 3.1 description of the Nubela Proxycurl API for company, competitor, customer, and employee data lookups.
+  x-generated-from: https://nubela.co/proxycurl/docs
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://nubela.co/proxycurl/api
+  description: Nubela Proxycurl API
+security:
+- bearerAuth: []
+tags:
+- name: Employee
+paths:
+  /employee/work-email:
+    get:
+      tags:
+      - Employee
+      summary: Find a work email given a person name and company domain
+      operationId: getEmployeeWorkEmail
+      responses:
+        '200':
+          description: A work email lookup result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /employee/profile:
+    get:
+      tags:
+      - Employee
+      summary: Enrich a professional profile by email or by name and employer
+      operationId: getEmployeeProfile
+      responses:
+        '200':
+          description: An enriched professional profile.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /employee/similar:
+    get:
+      tags:
+      - Employee
+      summary: Find similar professionals at competing companies
+      operationId: getSimilarEmployees
+      responses:
+        '200':
+          description: A list of similar professionals.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+components:
+  schemas:
+    GenericObject:
+      type: object
+      additionalProperties: true
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer

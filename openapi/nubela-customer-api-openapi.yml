@@ -1,0 +1,37 @@
+openapi: 3.1.0
+info:
+  title: Nubela Proxycurl Company Customer API
+  version: v1
+  description: Minimal OpenAPI 3.1 description of the Nubela Proxycurl API for company, competitor, customer, and employee data lookups.
+  x-generated-from: https://nubela.co/proxycurl/docs
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+- url: https://nubela.co/proxycurl/api
+  description: Nubela Proxycurl API
+security:
+- bearerAuth: []
+tags:
+- name: Customer
+paths:
+  /customer/listing:
+    get:
+      tags:
+      - Customer
+      summary: List customers, investors, and partners of a target company
+      operationId: listCustomers
+      responses:
+        '200':
+          description: A listing of customers and partners.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+components:
+  schemas:
+    GenericObject:
+      type: object
+      additionalProperties: true
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
