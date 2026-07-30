@@ -4,9 +4,22 @@ description: >-
   Build and scale data-driven applications on people and companies with Nubela's Proxycurl API without worrying about
   scaling a web scraping and data-science team.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nubela.png
 tags:
   - Companies
   - Data
@@ -17,25 +30,62 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/nubela/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: nubela:proxycurl
-    name: Nubela Proxycurl
-    description: >-
-      Build and scale data-driven applications on people and companies with the Proxycurl API without worrying about
-      scaling a web scraping and data-science team.
-    humanURL: https://nubela.co/proxycurl/
-    baseURL: https://nubela.co/proxycurl/api/
-    tags:
-      - Companies
-      - Data
-      - People
-      - Scraping
-    properties:
-      - type: OpenAPI
-        url: openapi/nubela-openapi.yml
-      - type: Documentation
-        url: https://nubela.co/proxycurl/docs
-      - type: Pricing
-        url: https://nubela.co/proxycurl/pricing
+- aid: nubela:nubela-company-api
+  name: Nubela Company API
+  description: The Company API from Nubela — 6 operation(s) for company.
+  humanURL: https://nubela.co/proxycurl/
+  baseURL: https://nubela.co/proxycurl/api/
+  tags:
+  - Company
+  properties:
+  - type: OpenAPI
+    url: openapi/nubela-company-api-openapi.yml
+  - type: Documentation
+    url: https://nubela.co/proxycurl/docs
+  - type: Pricing
+    url: https://nubela.co/proxycurl/pricing
+- aid: nubela:nubela-competitor-api
+  name: Nubela Competitor API
+  description: The Competitor API from Nubela — 1 operation(s) for competitor.
+  humanURL: https://nubela.co/proxycurl/
+  baseURL: https://nubela.co/proxycurl/api/
+  tags:
+  - Competitor
+  properties:
+  - type: OpenAPI
+    url: openapi/nubela-competitor-api-openapi.yml
+  - type: Documentation
+    url: https://nubela.co/proxycurl/docs
+  - type: Pricing
+    url: https://nubela.co/proxycurl/pricing
+- aid: nubela:nubela-customer-api
+  name: Nubela Customer API
+  description: The Customer API from Nubela — 1 operation(s) for customer.
+  humanURL: https://nubela.co/proxycurl/
+  baseURL: https://nubela.co/proxycurl/api/
+  tags:
+  - Customer
+  properties:
+  - type: OpenAPI
+    url: openapi/nubela-customer-api-openapi.yml
+  - type: Documentation
+    url: https://nubela.co/proxycurl/docs
+  - type: Pricing
+    url: https://nubela.co/proxycurl/pricing
+- aid: nubela:nubela-employee-api
+  name: Nubela Employee API
+  description: The Employee API from Nubela — 3 operation(s) for employee.
+  humanURL: https://nubela.co/proxycurl/
+  baseURL: https://nubela.co/proxycurl/api/
+  tags:
+  - Employee
+  properties:
+  - type: OpenAPI
+    url: openapi/nubela-employee-api-openapi.yml
+  - type: Documentation
+    url: https://nubela.co/proxycurl/docs
+  - type: Pricing
+    url: https://nubela.co/proxycurl/pricing
 common:
   - type: AgenticAccess
     url: agentic-access/nubela-agentic-access.yml
