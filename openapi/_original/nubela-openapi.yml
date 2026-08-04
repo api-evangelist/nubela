@@ -1,0 +1,162 @@
+openapi: 3.1.0
+info:
+  title: Nubela Proxycurl API
+  version: v1
+  description: >-
+    Minimal OpenAPI 3.1 description of the Nubela Proxycurl API for company,
+    competitor, customer, and employee data lookups.
+  x-generated-from: https://nubela.co/proxycurl/docs
+  x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://nubela.co/proxycurl/api
+    description: Nubela Proxycurl API
+security:
+  - bearerAuth: []
+tags:
+  - name: Company
+  - name: Competitor
+  - name: Customer
+  - name: Employee
+paths:
+  /customer/listing:
+    get:
+      tags: [Customer]
+      summary: List customers, investors, and partners of a target company
+      operationId: listCustomers
+      responses:
+        '200':
+          description: A listing of customers and partners.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /competitor/listing:
+    get:
+      tags: [Competitor]
+      summary: List competing companies for a target company
+      operationId: listCompetitors
+      responses:
+        '200':
+          description: A listing of competitors.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /company/logo:
+    get:
+      tags: [Company]
+      summary: Fetch the logo for a company
+      operationId: getCompanyLogo
+      responses:
+        '200':
+          description: A PNG image of the company logo.
+          content:
+            image/png:
+              schema:
+                type: string
+                format: binary
+  /company/details:
+    get:
+      tags: [Company]
+      summary: Get company metadata and leadership details
+      operationId: getCompanyDetails
+      responses:
+        '200':
+          description: Company details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /company/employee-count:
+    get:
+      tags: [Company]
+      summary: Get an estimated employee count range for a company
+      operationId: getCompanyEmployeeCount
+      responses:
+        '200':
+          description: Employee count range.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /company/updates:
+    get:
+      tags: [Company]
+      summary: Retrieve recent company blog posts and social media updates
+      operationId: getCompanyUpdates
+      responses:
+        '200':
+          description: A list of company updates.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /company/funding:
+    get:
+      tags: [Company]
+      summary: Get a company's funding history and investors
+      operationId: getCompanyFunding
+      responses:
+        '200':
+          description: Funding history.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /company/website:
+    get:
+      tags: [Company]
+      summary: Resolve a company name to a canonical website URL
+      operationId: resolveCompanyWebsite
+      responses:
+        '200':
+          description: A resolved website URL.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /employee/work-email:
+    get:
+      tags: [Employee]
+      summary: Find a work email given a person name and company domain
+      operationId: getEmployeeWorkEmail
+      responses:
+        '200':
+          description: A work email lookup result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /employee/profile:
+    get:
+      tags: [Employee]
+      summary: Enrich a professional profile by email or by name and employer
+      operationId: getEmployeeProfile
+      responses:
+        '200':
+          description: An enriched professional profile.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+  /employee/similar:
+    get:
+      tags: [Employee]
+      summary: Find similar professionals at competing companies
+      operationId: getSimilarEmployees
+      responses:
+        '200':
+          description: A list of similar professionals.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GenericObject'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  schemas:
+    GenericObject:
+      type: object
+      additionalProperties: true
