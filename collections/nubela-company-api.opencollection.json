@@ -1,0 +1,90 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nubela Proxycurl Company API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Company",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Fetch the logo for a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/logo"
+          },
+          "docs": "Fetch the logo for a company"
+        },
+        {
+          "info": {
+            "name": "Get company metadata and leadership details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/details"
+          },
+          "docs": "Get company metadata and leadership details"
+        },
+        {
+          "info": {
+            "name": "Get an estimated employee count range for a company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/employee-count"
+          },
+          "docs": "Get an estimated employee count range for a company"
+        },
+        {
+          "info": {
+            "name": "Retrieve recent company blog posts and social media updates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/updates"
+          },
+          "docs": "Retrieve recent company blog posts and social media updates"
+        },
+        {
+          "info": {
+            "name": "Get a company's funding history and investors",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/funding"
+          },
+          "docs": "Get a company's funding history and investors"
+        },
+        {
+          "info": {
+            "name": "Resolve a company name to a canonical website URL",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/company/website"
+          },
+          "docs": "Resolve a company name to a canonical website URL"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

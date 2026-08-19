@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nubela Proxycurl Company Customer API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Customer",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List customers, investors, and partners of a target company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/customer/listing"
+          },
+          "docs": "List customers, investors, and partners of a target company"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

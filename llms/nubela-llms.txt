@@ -1,0 +1,44 @@
+# NinjaPear API
+
+> NinjaPear is a B2B Company Intelligence platform focused on data ownership and ethical sourcing. Look up customers, investors, partners, competitors, funding history, employee data, and more for any company globally.
+
+## API Documentation
+
+- [Full API Reference](https://nubela.co/llms-full.txt): Complete API reference in markdown - all endpoints, parameters, response schemas, and code examples in cURL, Python, and JavaScript
+- [OpenAPI 3.0 Specification](https://nubela.co/api/openapi3.yaml): Machine-readable API specification in YAML format
+
+## Authentication
+
+All API requests require a Bearer token in the `Authorization` header. Get your API key at <https://nubela.co/dashboard>.
+
+## Endpoints
+
+- `GET /api/v1/customer/listing` - Get customers, investors, and partners of any company
+- `GET /api/v1/competitor/listing` - Find competitors and competitive reasoning for any company
+- `GET /api/v1/company/logo` - Get a company's logo image (free, no credits)
+- `GET /api/v1/company/details` - Full company details: industry, executives, financials, office locations
+- `GET /api/v1/company/employee-count` - Estimated employee count for a company
+- `GET /api/v1/company/updates` - Recent blog posts and social media updates
+- `GET /api/v1/company/funding` - Full funding history and investors
+- `GET /api/v2/employee/profile` - Person's profile, job history, and education from work email
+- `GET /api/v1/employee/similar` - Find people in similar roles at competing companies
+- `GET /api/v1/employee/search` - Find current employees of a company by role, optionally narrowed by country/state/city
+- `GET /api/v1/employee/work-email` - Best-effort lookup of a person's work email by first name, last name, and company domain
+- `GET /api/v1/contact/disposable-email` - Check if an email is disposable or free (free, no credits)
+- `GET /api/v1/meta/credit-balance` - Check remaining API credits (free, no credits)
+
+## Monitor API
+
+- `GET /api/v1/monitor/feeds` - List all monitoring feeds
+- `POST /api/v1/monitor/feeds` - Create a new monitoring feed
+- `GET /api/v1/monitor/feeds/{feed_id}` - Describe a specific feed
+- `PATCH /api/v1/monitor/feeds/{feed_id}` - Update a feed
+- `DELETE /api/v1/monitor/feeds/{feed_id}` - Delete a feed
+- `POST /api/v1/monitor/feeds/{feed_id}/targets` - Add a company target to a feed
+- `PATCH /api/v1/monitor/feeds/{feed_id}/targets/{target_id}` - Update a target
+- `DELETE /api/v1/monitor/feeds/{feed_id}/targets/{target_id}` - Remove a target
+- `GET /api/v1/monitor/feeds/{feed_id}/rss.xml` - Consume a feed via RSS
+
+## Base URL
+
+All endpoints use `https://nubela.co` as the base URL.

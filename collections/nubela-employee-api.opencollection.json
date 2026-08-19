@@ -1,0 +1,57 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nubela Proxycurl Company Employee API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Employee",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Find a work email given a person name and company domain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/employee/work-email"
+          },
+          "docs": "Find a work email given a person name and company domain"
+        },
+        {
+          "info": {
+            "name": "Enrich a professional profile by email or by name and employer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/employee/profile"
+          },
+          "docs": "Enrich a professional profile by email or by name and employer"
+        },
+        {
+          "info": {
+            "name": "Find similar professionals at competing companies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/employee/similar"
+          },
+          "docs": "Find similar professionals at competing companies"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

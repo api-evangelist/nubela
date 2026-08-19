@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Nubela Proxycurl Company Competitor API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Competitor",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List competing companies for a target company",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://nubela.co/proxycurl/api/competitor/listing"
+          },
+          "docs": "List competing companies for a target company"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
