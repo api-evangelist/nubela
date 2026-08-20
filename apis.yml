@@ -64,6 +64,8 @@ apis:
   humanURL: https://nubela.co/proxycurl/
   baseURL: https://nubela.co/proxycurl/api/
   tags:
+  - Customers
+  tags_raw:
   - Customer
   properties:
   - type: OpenAPI
