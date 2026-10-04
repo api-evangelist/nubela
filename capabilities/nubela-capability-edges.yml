@@ -1,0 +1,25 @@
+slug: nubela
+provider: Nubela
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Competitor
+  spec_file: nubela-competitor-api-openapi.yml
+  capability_id: BC-400.30
+  capability_id_l1: BC-400
+  capability_name: Market Intelligence Management
+  confidence: 0.7
+  evidence: GET /competitor/listing  listCompetitors  List competing companies for a target company
+  reason: The sole operation returns competitor sets for a target company, which is competitive intelligence
+    — the explicit content of Market Intelligence Management. Thin surface (one endpoint, GenericObject
+    schema) caps confidence.

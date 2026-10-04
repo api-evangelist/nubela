@@ -102,6 +102,9 @@ apis:
   - type: Pricing
     url: https://nubela.co/proxycurl/pricing
 common:
+  - type: CapabilityMap
+    url: capabilities/nubela-capability-edges.yml
+    name: Nubela Business Capability Map
   - type: AgenticAccess
     url: agentic-access/nubela-agentic-access.yml
   - type: DomainSecurity
