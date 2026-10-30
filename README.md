@@ -1,4 +1,4 @@
-# Nubela (nubela)
+# Nubela
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,58 +66,122 @@
 
 Build and scale data-driven applications on people and companies with Nubela's Proxycurl API without worrying about scaling a web scraping and data-science team.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/nubela/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/nubela/refs/heads/main/apis.yml)
+**Areas:** Companies · Data · People · Web Scraping
 
-## Scope
+## Nubela on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Nubela is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nubela/](https://apis.io/providers/nubela/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Companies
-- Data
-- People
-- Scraping
+- [Nubela Company API](https://apis.io/apis/nubela/nubela-company-api/) — The Company API from Nubela — 6 operation(s) for company.
+- [Nubela Competitor API](https://apis.io/apis/nubela/nubela-competitor-api/) — The Competitor API from Nubela — 1 operation(s) for competitor.
+- [Nubela Customer API](https://apis.io/apis/nubela/nubela-customer-api/) — The Customer API from Nubela — 1 operation(s) for customer.
+- [Nubela Employee API](https://apis.io/apis/nubela/nubela-employee-api/) — The Employee API from Nubela — 3 operation(s) for employee.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-08
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Nubela Proxycurl
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Build and scale data-driven applications on people and companies with the Proxycurl API without worrying about scaling a web scraping and data-science team.
+- [Nubela Agentic Access](https://apis.io/agentic-access/nubela/nubela-agentic-access/)
 
-- **Human URL:** [https://nubela.co/proxycurl/](https://nubela.co/proxycurl/)
-- **Base URL:** `https://nubela.co/proxycurl/api/`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Companies
-- Data
-- People
-- Scraping
+- [Nubela Proxycurl API](https://apis.io/collections/nubela/open-nubela/)
+- [Nubela Proxycurl Company API](https://apis.io/collections/nubela/open-nubela-company-api/)
+- [Nubela Proxycurl Company Competitor API](https://apis.io/collections/nubela/open-nubela-competitor-api/)
+- [Nubela Proxycurl Company Customer API](https://apis.io/collections/nubela/open-nubela-customer-api/)
+- [Nubela Proxycurl Company Employee API](https://apis.io/collections/nubela/open-nubela-employee-api/)
 
-#### Properties
+#### Security (2)
 
-- [OpenAPI](openapi/nubela-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/nubela.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/nubela.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Documentation](https://nubela.co/proxycurl/docs)
-- [Pricing](https://nubela.co/proxycurl/pricing)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Nubela Authentication](https://apis.io/security/nubela/nubela-authentication/)
+- [Nubela Domain Security](https://apis.io/security/nubela/nubela-domain-security/)
 
-- [GitHub Organization](https://github.com/nubela)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Nubela Plans Pricing](https://apis.io/plans/nubela/nubela-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Nubela Rate Limits](https://apis.io/rate-limits/nubela/nubela-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Nubela Finops](https://apis.io/finops/nubela/nubela-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://nubela.co/proxycurl/)
 - [Documentation](https://nubela.co/proxycurl/docs)
-- [L L Ms Txt](https://nubela.co/llms.txt)
+- [Blog](https://nubela.co/blog/feed)
+- [GitHub](https://github.com/nubela)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 24.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 60.7 |
+| Contract quality | 42.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 23.8 |
+| Access clarity | 7.9 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nubela/](https://apis.io/providers/nubela/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Nubela: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nubela/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
